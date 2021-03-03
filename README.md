@@ -193,10 +193,11 @@ dispatch({type: '@@INIT'})
 At the top of the file, we declare but do not assign our state, so it starts off
 undefined.  Then at the bottom the file, we dispatch an action of `'@@INIT'`.
 This calls our `dispatch()` function and passes through our initial action.
-`dispatch()` calls the `changeState()` reducer.  `changeState()` is executed, passing
-through two local variables: state and action.  `action` is defined because we
-passed `{ type: '@@INIT' }` into dispatch. `state` is currently **undefined**, so, with 
-that initial dispatch we are really calling:
+
+`dispatch()` calls the `changeState()` reducer.  
+`changeState()` is executed, passing through two local variables: state and action.  
+`action` is defined because we passed `{ type: '@@INIT' }` into dispatch. 
+`state` is currently **undefined**, so, with that initial dispatch we are really calling:
 
 ```js
 changeState(undefined, { type: '@@INIT' })
